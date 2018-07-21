@@ -12,6 +12,12 @@
 		016ACEE7210319BD009EBCF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016ACEE5210319BD009EBCF6 /* Main.storyboard */; };
 		016ACEE9210319BE009EBCF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016ACEE8210319BE009EBCF6 /* Assets.xcassets */; };
 		016ACEEC210319BE009EBCF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016ACEEA210319BE009EBCF6 /* LaunchScreen.storyboard */; };
+		016ACEF9210319CA009EBCF6 /* AlertMods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016ACEF3210319C9009EBCF6 /* AlertMods.swift */; };
+		016ACEFA210319CA009EBCF6 /* AnimateMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016ACEF4210319C9009EBCF6 /* AnimateMod.swift */; };
+		016ACEFB210319CA009EBCF6 /* ImageMods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016ACEF5210319C9009EBCF6 /* ImageMods.swift */; };
+		016ACEFC210319CA009EBCF6 /* Mod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016ACEF6210319C9009EBCF6 /* Mod.swift */; };
+		016ACEFD210319CA009EBCF6 /* ColorMods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016ACEF7210319CA009EBCF6 /* ColorMods.swift */; };
+		016ACEFE210319CA009EBCF6 /* DateMods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016ACEF8210319CA009EBCF6 /* DateMods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		016ACEE8210319BE009EBCF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		016ACEEB210319BE009EBCF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		016ACEED210319BE009EBCF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016ACEF3210319C9009EBCF6 /* AlertMods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertMods.swift; sourceTree = "<group>"; };
+		016ACEF4210319C9009EBCF6 /* AnimateMod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateMod.swift; sourceTree = "<group>"; };
+		016ACEF5210319C9009EBCF6 /* ImageMods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMods.swift; sourceTree = "<group>"; };
+		016ACEF6210319C9009EBCF6 /* Mod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mod.swift; sourceTree = "<group>"; };
+		016ACEF7210319CA009EBCF6 /* ColorMods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMods.swift; sourceTree = "<group>"; };
+		016ACEF8210319CA009EBCF6 /* DateMods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateMods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,12 @@
 			children = (
 				016ACEE1210319BD009EBCF6 /* AppDelegate.swift */,
 				016ACEE3210319BD009EBCF6 /* ViewController.swift */,
+				016ACEF3210319C9009EBCF6 /* AlertMods.swift */,
+				016ACEF4210319C9009EBCF6 /* AnimateMod.swift */,
+				016ACEF7210319CA009EBCF6 /* ColorMods.swift */,
+				016ACEF8210319CA009EBCF6 /* DateMods.swift */,
+				016ACEF5210319C9009EBCF6 /* ImageMods.swift */,
+				016ACEF6210319C9009EBCF6 /* Mod.swift */,
 				016ACEE5210319BD009EBCF6 /* Main.storyboard */,
 				016ACEE8210319BE009EBCF6 /* Assets.xcassets */,
 				016ACEEA210319BE009EBCF6 /* LaunchScreen.storyboard */,
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016ACEFD210319CA009EBCF6 /* ColorMods.swift in Sources */,
+				016ACEFC210319CA009EBCF6 /* Mod.swift in Sources */,
+				016ACEFE210319CA009EBCF6 /* DateMods.swift in Sources */,
 				016ACEE4210319BD009EBCF6 /* ViewController.swift in Sources */,
 				016ACEE2210319BD009EBCF6 /* AppDelegate.swift in Sources */,
+				016ACEFA210319CA009EBCF6 /* AnimateMod.swift in Sources */,
+				016ACEF9210319CA009EBCF6 /* AlertMods.swift in Sources */,
+				016ACEFB210319CA009EBCF6 /* ImageMods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
