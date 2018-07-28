@@ -8,13 +8,31 @@
 
 import UIKit
 
-class ImageMods: Mod {
+class ImageMods {
     
-    override init(view_controller: UIViewController) {
-        super.init(view_controller: view_controller)
+    public static func removeWhiteBackground(with image: UIImage) -> UIImage? {
+        let raw_image_ref = image.cgImage
+        
+        let color_masking: [CGFloat] = [222,255,222,255,222,255]
+        
+        UIGraphicsBeginImageContext(image.size)
+        
+        let masked_image_ref = raw_image_ref?.copy(maskingColorComponents: color_masking)
+        
+        do {
+            UIGraphicsGetCurrentContext()?.translateBy(x: 0.0, y: image.size.height)
+            UIGraphicsGetCurrentContext()?.scaleBy(x: 1.0, y: -1.0)
+        } 
+        
+        UIGraphicsGetCurrentContext()?.draw(masked_image_ref!, in: CGRect(x: 0, y: 0, width: image.size.width , height: image.size.height ))
+        
+        let result: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+        
+        return result!
+        
     }
     
-    func convert_image_to_pixel_buffer(with image: UIImage, size: CGSize) -> CVPixelBuffer? {
+    public static func convertImageToPixelBuffer(with image: UIImage, size: CGSize) -> CVPixelBuffer? {
         if let image = image.cgImage {
             let frameSize = size
             var pixelBuffer:CVPixelBuffer? = nil

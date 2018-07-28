@@ -30,39 +30,58 @@ class DateMods {
         return formatter.string(from: Date())
     }
     
-    static func type_a() -> String {
+    /**
+     Format: Wednesday, Jul 25, 2018
+     */
+    static func typeA() -> String {
         return timestamp(with: "EEEE, MMM d, yyyy")
     }
-    
-    static func type_b() -> String {
+    /**
+     Format: 07/25/2018
+     */
+    static func typeB() -> String {
         return timestamp(with: "MM/dd/yyyy")
     }
-    
-    static func type_c() -> String {
+    /**
+     Format: 07-25-2018 18:48
+     */
+    static func typeC() -> String {
         return timestamp(with: "MM-dd-yyyy HH:mm")
     }
-    
-    static func type_d() -> String {
+    /**
+     Format: 07-25-2018 6:48 PM
+     */
+    static func typeD() -> String {
         return timestamp(with: "MMM d, h:mm a")
     }
-    
-    static func type_e() -> String {
+    /**
+     Format: July 2018
+     */
+    static func typeE() -> String {
         return timestamp(with: "MMMM yyyy")
     }
-    
-    static func type_f() -> String {
+    /**
+     Format: Jul 25, 2018
+     */
+    static func typeF() -> String {
         return timestamp(with: "MMM d, yyyy")
     }
-    
-    static func type_g() -> String {
+    /**
+     Format: 25.07.18
+     */
+    static func typeG() -> String {
         return timestamp(with: "dd.MM.yy")
     }
-    
-    static func type_h() -> String {
+    /**
+     Format: Wed, 25 Jul 2018 18:48:01 -0700
+     */
+    static func typeH() -> String {
         return timestamp(with: "E, d MMM yyyy HH:mm:ss Z")
     }
-    
-    static func type_i() -> String {
+    /**
+     Format: 2018-07-25T18:48:01-0700
+     */
+    static func typeI() -> String {
         return timestamp(with: "yyyy-MM-dd'T'HH:mm:ssZ")
     }
     

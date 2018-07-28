@@ -9,48 +9,49 @@
 import UIKit
 
 class AlertMods {
-   
-    private static func alert() {
-        
-    }
     
-    public static func custom_controller(title: String, message: String, with view_controller: UIViewController) {
+    public static func customController(title: String, message: String, with vc: UIViewController) {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let okay = UIAlertAction(title: "Okay", style: .default, handler: nil)
         ac.addAction(okay)
         
-        view_controller.present(ac, animated: true, completion: nil)
+        vc.present(ac, animated: true, completion: nil)
         
     }
     
-    static func generic_error(with view_controller: UIViewController) {
-        custom_controller(title: "Error", message: "Whoops, something went wrong. Please try again later.", with: view_controller)
+    /**
+     Generic error
+     ## Details ##
+     - Title: Error
+     - Message: Whoops, something went wrong. Please try again later.
+     
+     - Parameter vc: The view controller where the Alert will be displayed.
+     */
+    static func genericError(vc: UIViewController) {
+        customController(title: "Error", message: "Whoops, something went wrong. Please try again later.", with: vc)
     }
     
-    static func login_failed_with_username(with view_controller: UIViewController) {
-        custom_controller(title: "Login Failed", message: "Username or password did not match our records.", with: view_controller)
+    static func loginFailedWithUsername(with vc: UIViewController) {
+        customController(title: "Login Failed", message: "Username or password did not match our records.", with: vc)
     }
     
-    static func login_failed_with_email(with view_controller: UIViewController) {
-        custom_controller(title: "Login Failed", message: "Email or password did not match our records.", with: view_controller)
+    static func loginFailedWithEmail(with vc: UIViewController) {
+        customController(title: "Login Failed", message: "Email or password did not match our records.", with: vc)
     }
     
-    static func passwords_dont_match(with view_controller: UIViewController) {
-        custom_controller(title: "Registration Failed", message: "Password and confirm password does not match.", with: view_controller)
+    static func passwordsDontMatch(with vc: UIViewController) {
+        customController(title: "Registration Failed", message: "Password and confirm password does not match.", with: vc)
     }
     
-    static func network_error(with view_controller: UIViewController) {
-        custom_controller(title: "Network Failed", message: "The network has failed. Please try again later.", with: view_controller)
-    }
-    
-    static func generic_404_error(with view_controller: UIViewController) {
-        custom_controller(title: "404 Error", message: "Could not load page.", with: view_controller)
+    static func networkError(with vc: UIViewController) {
+        customController(title: "Network Failed", message: "The network has failed. Please try again later.", with: vc)
     }
     
     
-    
-    
+    static func generic404Error(with vc: UIViewController) {
+        customController(title: "404 Error", message: "Could not load page.", with: vc)
+    }
     
     
 }
