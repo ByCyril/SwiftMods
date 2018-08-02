@@ -1,36 +1,71 @@
+//  MIT License
 //
-//  ImageMods.swift
-//  Pretzel
+//  Copyright (c) 2018 Cyril Garcia
 //
-//  Created by Cyril Garcia on 7/21/18.
-//  Copyright © 2018 Cyril Garcia. All rights reserved.
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
 //
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+//
+
 
 import UIKit
 
 class ImageMods {
     
+    /**
+     Remove white background from image
+     ## Details ##
+     
+     Removing white background from image
+     
+     - Parameter image: The image with white background
+     */
     public static func removeWhiteBackground(with image: UIImage) -> UIImage? {
-        let raw_image_ref = image.cgImage
+        let rawImageRef = image.cgImage
         
-        let color_masking: [CGFloat] = [222,255,222,255,222,255]
+        let colorMasking: [CGFloat] = [222,255,222,255,222,255]
         
         UIGraphicsBeginImageContext(image.size)
         
-        let masked_image_ref = raw_image_ref?.copy(maskingColorComponents: color_masking)
+        let maskedImageRef = rawImageRef?.copy(maskingColorComponents: colorMasking)
         
         do {
             UIGraphicsGetCurrentContext()?.translateBy(x: 0.0, y: image.size.height)
             UIGraphicsGetCurrentContext()?.scaleBy(x: 1.0, y: -1.0)
         } 
         
-        UIGraphicsGetCurrentContext()?.draw(masked_image_ref!, in: CGRect(x: 0, y: 0, width: image.size.width , height: image.size.height ))
+        UIGraphicsGetCurrentContext()?.draw(maskedImageRef!, in: CGRect(x: 0, y: 0, width: image.size.width , height: image.size.height ))
         
-        let result: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+        let result = UIGraphicsGetImageFromCurrentImageContext()
         
-        return result!
+        return result
         
     }
+    
+    /**
+     Convert Image to CVPixelBuffer
+     ## Details ##
+     
+     Used mainly for CoreML image recognition
+     
+     - Parameter image: The image that will be converted to CVPixelBuffer
+     - Parameter size: The size of the image you need to set it to.
+
+     */
     
     public static func convertImageToPixelBuffer(with image: UIImage, size: CGSize) -> CVPixelBuffer? {
         if let image = image.cgImage {
