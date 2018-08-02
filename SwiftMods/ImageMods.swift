@@ -24,7 +24,7 @@
 
 import UIKit
 
-class ImageMods {
+public class ImageMods {
     
     /**
      Remove white background from image

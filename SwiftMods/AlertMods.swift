@@ -23,7 +23,7 @@
 
 import UIKit
 
-class AlertMods {
+public class AlertMods {
     
     /**
      Custom Alert
@@ -51,7 +51,7 @@ class AlertMods {
      
      - Parameter vc: The view controller where the Alert will be displayed.
      */
-    static func genericError(vc: UIViewController) {
+    public static func genericError(vc: UIViewController) {
         customController(title: "Error", message: "Whoops, something went wrong. Please try again later.", with: vc)
     }
     
@@ -63,7 +63,7 @@ class AlertMods {
      
      - Parameter vc: The view controller where the Alert will be displayed.
      */
-    static func loginFailedWithUsername(with vc: UIViewController) {
+    public static func loginFailedWithUsername(with vc: UIViewController) {
         customController(title: "Login Failed", message: "Username or password did not match our records.", with: vc)
     }
     
@@ -75,7 +75,7 @@ class AlertMods {
      
      - Parameter vc: The view controller where the Alert will be displayed.
      */
-    static func loginFailedWithEmail(with vc: UIViewController) {
+    public static func loginFailedWithEmail(with vc: UIViewController) {
         customController(title: "Login Failed", message: "Email or password did not match our records.", with: vc)
     }
     
@@ -87,7 +87,7 @@ class AlertMods {
      
      - Parameter vc: The view controller where the Alert will be displayed.
      */
-    static func passwordsDontMatch(with vc: UIViewController) {
+    public static func passwordsDontMatch(with vc: UIViewController) {
         customController(title: "Registration Failed", message: "Password and confirm password does not match.", with: vc)
     }
     
@@ -99,7 +99,7 @@ class AlertMods {
      
      - Parameter vc: The view controller where the Alert will be displayed.
      */
-    static func networkError(with vc: UIViewController) {
+    public static func networkError(with vc: UIViewController) {
         customController(title: "Network Failed", message: "The network has failed. Please try again later.", with: vc)
     }
     
@@ -111,7 +111,7 @@ class AlertMods {
      
      - Parameter vc: The view controller where the Alert will be displayed.
      */
-    static func generic404Error(with vc: UIViewController) {
+    public static func generic404Error(with vc: UIViewController) {
         customController(title: "404 Error", message: "Could not load page.", with: vc)
     }
     

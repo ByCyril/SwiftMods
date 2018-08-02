@@ -23,7 +23,7 @@
 
 import UIKit
 
-class ColorMods {
+public class ColorMods {
     
     /**
      RGB color input

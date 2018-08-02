@@ -24,7 +24,7 @@
 
 import UIKit
 
-class SwiftMod {
+public class SwiftMod {
     
     /**
     Add shadow effect
@@ -33,7 +33,7 @@ class SwiftMod {
      Adding basic shadow to any UI element
      - Parameter view: The UI element where shadow will be applied.
      */
-    func basic_shadow(with view: UIView) {
+    public func basic_shadow(with view: UIView) {
         view.layer.shadowColor = UIColor.gray.cgColor
         view.layer.shadowOpacity = 0.75
     }
@@ -46,7 +46,7 @@ class SwiftMod {
      
      - Parameter views: The UI elements where rounded corners will be applied.
      */
-    func round_corners(with views: [UIView]) {
+    public func round_corners(with views: [UIView]) {
         for view in views {
             view.layer.cornerRadius = view.frame.width / 2
             
@@ -61,7 +61,7 @@ class SwiftMod {
      
      - Parameter view: the UI element where rounded corners will be applied.
      */
-    func rounder_corners(with view: UIView) {
+    public func rounder_corners(with view: UIView) {
         view.layer.cornerRadius = view.frame.width / 2
     }
     
